@@ -17,7 +17,7 @@ virtualenv:
 	. $(VIRTUALENV)/bin/activate
 	pip install pip --upgrade
 	LC_ALL=en_US.UTF-8 ./virtualenv/bin/pip3 install -r requirements.txt
-	./virtualenv/bin/ansible-galaxy collection install azure.azcollection --force
+	./virtualenv/bin/ansible-galaxy collection install azure.azcollection:==1.2.0 --force
 	./virtualenv/bin/pip3 install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
 	./virtualenv/bin/ansible-galaxy collection install community.okd
 
